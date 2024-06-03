@@ -1,7 +1,8 @@
-
-
 <%= simple_form_for @article do |f| %>
   <%= f.input :title %>
   <%= f.input :description %>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>
+<div class="mb-3">
+  <%= link_to "Retour", articles_path  %>
+</div>

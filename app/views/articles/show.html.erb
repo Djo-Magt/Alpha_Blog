@@ -2,3 +2,10 @@
 
 <p><%= @article.title  %></p>
 <p><%= @article.description  %></p>
+
+<%= link_to 'Edit', edit_article_path(@article) %>
+<%= link_to "Delete", article_path(@article),
+    data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+    class: "ms-3 text-danger"
+%>
+<%= link_to 'Retour', articles_path %>

@@ -1,6 +1,8 @@
 <%= simple_form_for @article do |f| %>
   <%= f.input :title %>
   <%= f.input :description %>
+  <%= f.collection_select(:category_ids, Category.all, :id, :name,
+  { prompt: "Make your selection from the list" }, { multiple: true, size: 3, class: "custom_select shadow rounded" }) %>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>
 <div class="mb-3">

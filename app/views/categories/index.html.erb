@@ -12,6 +12,9 @@
           <div class="card text-center shadow mb-5 bg-white rounded">
             <div class="card-body">
               <h5 class="card-title"><%= link_to category.name, category_path(category), class:"text-success" %></h5>
+              <% if category.articles.any? %>
+                <%= category.articles.count  %> articles disponibles
+              <% end %>
             </div>
             <div class="card-footer text-muted">
               <small>

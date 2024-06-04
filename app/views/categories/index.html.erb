@@ -1,5 +1,9 @@
-<div id="page-content">
+
   <h1 class="text-center mt-4 pt-4">Liste des catégories</h1>
+
+  <div class="flickr_pagination">
+    <%= will_paginate @categories, :container => false %>
+
 
   <div class="container">
     <% @categories.each do |category| %>

@@ -14,7 +14,9 @@
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
     <main class="flex-shrink-0">
-      <%= yield %>
+      <div id="page-content">
+        <%= yield %>
+      </div>
     </main>
     <%= render "shared/footer"  %>
   </body>
